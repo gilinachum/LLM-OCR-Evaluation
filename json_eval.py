@@ -83,6 +83,7 @@ def compare_values(val1: Any, val2: Any, path: str) -> Tuple[float, DifferenceRe
         report.add_difference(path, "Unsupported Type", type(val1).__name__, type(val2).__name__)
         return 0, report
 
+
 def compare_lists(list1: List[Any], list2: List[Any], path: str) -> Tuple[float, DifferenceReport]:
     report = DifferenceReport()
 
@@ -95,6 +96,7 @@ def compare_lists(list1: List[Any], list2: List[Any], path: str) -> Tuple[float,
     scores = []
     for i, item1 in enumerate(list1):
         best_score = 0
+        best_report = DifferenceReport()
         for j, item2 in enumerate(list2):
             score, sub_report = compare_values(item1, item2, f"{path}[{i}]")
             if score > best_score:
@@ -104,7 +106,11 @@ def compare_lists(list1: List[Any], list2: List[Any], path: str) -> Tuple[float,
         report.differences.extend(best_report.differences)
     
     for j, item2 in enumerate(list2):
-        best_score = max(compare_values(item1, item2, f"{path}[{j}]")[0] for item1 in list1)
+        best_score = 0
+        for i, item1 in enumerate(list1):
+            score, _ = compare_values(item1, item2, f"{path}[{j}]")
+            if score > best_score:
+                best_score = score
         scores.append(best_score)
     
     return sum(scores) / len(scores), report
@@ -120,3 +126,35 @@ def string_similarity(s1: str, s2: str) -> float:
 # Example usage
 json1 = json.loads('{"name": "John", "age": 30, "city": "New York", "hobbies": ["reading", "swimming"], "details": {"height": 180, "weight": 75}}')
 json2 = json.loads('{"name": "Jon", "age": 31, "city": "New York", "hobbies": ["reading", "running"], "details": {"height": 182, "weight": 78}}')
+
+
+def extract_json_from_string(input_string):
+    import json
+    import re
+    json_str = None
+    start_index = input_string.find('{')
+    if start_index != -1:
+        # Initialize counters for matching braces
+        open_braces = 0
+        for i in range(start_index, len(input_string)):
+            if input_string[i] == '{':
+                open_braces += 1
+            elif input_string[i] == '}':
+                open_braces -= 1
+                if open_braces == 0:
+                    end_index = i + 1
+                    json_str = input_string[start_index:end_index]
+                    break
+
+    if json_str:
+        try:
+            # Load the JSON object
+            print(json_str)
+            json_obj = json.loads(json_str)
+            return json_obj
+        except json.JSONDecodeError:
+            print("Error decoding JSON")
+            return None
+    else:
+        print("No JSON object found in the string")
+        return None
