@@ -5,12 +5,12 @@ class DifferenceReport:
     def __init__(self):
         self.differences = []
 
-    def add_difference(self, path: str, type: str, value1: Any, value2: Any):
+    def add_difference(self, path: str, type: str, expected_value: Any, actual_value: Any):
         self.differences.append({
             "path": path,
             "type": type,
-            "value1": value1,
-            "value2": value2
+            "expected value": expected_value,
+            "actual value": actual_value
         })
 
     def print_report(self):
@@ -21,29 +21,29 @@ class DifferenceReport:
             for diff in self.differences:
                 print(f"  Path: {diff['path']}")
                 print(f"  Type: {diff['type']}")
-                print(f"  Value 1: {diff['value1']}")
-                print(f"  Value 2: {diff['value2']}")
+                print(f"  Expected Value 1: {diff['expected value']}")
+                print(f"  Actual Value 2: {diff['actual value']}")
                 print()
 
-def compare_json(obj1: Dict[str, Any], obj2: Dict[str, Any], path: str = "") -> Tuple[float, DifferenceReport]:
+def compare_json(expected: Dict[str, Any], actual: Dict[str, Any], path: str = "") -> Tuple[float, DifferenceReport]:
     total_score = 0
     total_weight = 0
     report = DifferenceReport()
 
-    all_keys = set(obj1.keys()) | set(obj2.keys())
+    all_keys = set(expected.keys()) | set(actual.keys())
 
     for key in all_keys:
         weight = 1
         current_path = f"{path}.{key}" if path else key
 
-        if key not in obj1:
-            report.add_difference(current_path, "Missing Key", "Not present", obj2[key])
+        if key not in expected:
+            report.add_difference(current_path, "Missing Key", "Not present", actual[key])
             score = 0
-        elif key not in obj2:
-            report.add_difference(current_path, "Missing Key", obj1[key], "Not present")
+        elif key not in actual:
+            report.add_difference(current_path, "Missing Key", expected[key], "Not present")
             score = 0
         else:
-            score, sub_report = compare_values(obj1[key], obj2[key], current_path)
+            score, sub_report = compare_values(expected[key], actual[key], current_path)
             report.differences.extend(sub_report.differences)
         
         total_score += score * weight
@@ -52,52 +52,52 @@ def compare_json(obj1: Dict[str, Any], obj2: Dict[str, Any], path: str = "") -> 
     final_score = (total_score / total_weight) * 100 if total_weight > 0 else 100
     return final_score, report
 
-def compare_values(val1: Any, val2: Any, path: str) -> Tuple[float, DifferenceReport]:
+def compare_values(expected_val: Any, actual_val: Any, path: str) -> Tuple[float, DifferenceReport]:
     report = DifferenceReport()
 
-    if type(val1) != type(val2):
-        report.add_difference(path, "Type Mismatch", type(val1).__name__, type(val2).__name__)
+    if type(expected_val) != type(actual_val):
+        report.add_difference(path, "Type Mismatch", type(expected_val).__name__, type(actual_val).__name__)
         return 0, report
     
-    if isinstance(val1, dict):
-        score, sub_report = compare_json(val1, val2, path)
+    if isinstance(expected_val, dict):
+        score, sub_report = compare_json(expected_val, actual_val, path)
         return score / 100, sub_report
-    elif isinstance(val1, list):
-        return compare_lists(val1, val2, path)
-    elif isinstance(val1, (int, float)):
-        score = 1 - min(abs(val1 - val2) / max(abs(val1), abs(val2), 1), 1)
+    elif isinstance(expected_val, list):
+        return compare_lists(expected_val, actual_val, path)
+    elif isinstance(expected_val, (int, float)):
+        score = 1 - min(abs(expected_val - actual_val) / max(abs(expected_val), abs(actual_val), 1), 1)
         if score < 1:
-            report.add_difference(path, "Value Difference", val1, val2)
+            report.add_difference(path, "Value Difference", expected_val, actual_val)
         return score, report
-    elif isinstance(val1, str):
-        score = string_similarity(val1, val2)
+    elif isinstance(expected_val, str):
+        score = string_similarity(expected_val, actual_val)
         if score < 1:
-            report.add_difference(path, "String Difference", val1, val2)
+            report.add_difference(path, "String Difference", expected_val, actual_val)
         return score, report
-    elif isinstance(val1, bool):
-        score = 1 if val1 == val2 else 0
+    elif isinstance(expected_val, bool):
+        score = 1 if expected_val == actual_val else 0
         if score < 1:
-            report.add_difference(path, "Boolean Difference", val1, val2)
+            report.add_difference(path, "Boolean Difference", expected_val, actual_val)
         return score, report
     else:
-        report.add_difference(path, "Unsupported Type", type(val1).__name__, type(val2).__name__)
+        report.add_difference(path, "Unsupported Type", type(expected_val).__name__, type(actual_val).__name__)
         return 0, report
 
 
-def compare_lists(list1: List[Any], list2: List[Any], path: str) -> Tuple[float, DifferenceReport]:
+def compare_lists(expected_list: List[Any], actual_list: List[Any], path: str) -> Tuple[float, DifferenceReport]:
     report = DifferenceReport()
 
-    if len(list1) == 0 and len(list2) == 0:
+    if len(expected_list) == 0 and len(actual_list) == 0:
         return 1, report
-    if len(list1) == 0 or len(list2) == 0:
-        report.add_difference(path, "List Length Mismatch", len(list1), len(list2))
+    if len(expected_list) == 0 or len(actual_list) == 0:
+        report.add_difference(path, "List Length Mismatch", len(expected_list), len(actual_list))
         return 0, report
     
     scores = []
-    for i, item1 in enumerate(list1):
+    for i, item1 in enumerate(expected_list):
         best_score = 0
         best_report = DifferenceReport()
-        for j, item2 in enumerate(list2):
+        for j, item2 in enumerate(actual_list):
             score, sub_report = compare_values(item1, item2, f"{path}[{i}]")
             if score > best_score:
                 best_score = score
@@ -105,9 +105,9 @@ def compare_lists(list1: List[Any], list2: List[Any], path: str) -> Tuple[float,
         scores.append(best_score)
         report.differences.extend(best_report.differences)
     
-    for j, item2 in enumerate(list2):
+    for j, item2 in enumerate(actual_list):
         best_score = 0
-        for i, item1 in enumerate(list1):
+        for i, item1 in enumerate(expected_list):
             score, _ = compare_values(item1, item2, f"{path}[{j}]")
             if score > best_score:
                 best_score = score
@@ -149,7 +149,7 @@ def extract_json_from_string(input_string):
     if json_str:
         try:
             # Load the JSON object
-            print(json_str)
+            #print(json_str)
             json_obj = json.loads(json_str)
             return json_obj
         except json.JSONDecodeError:

@@ -1,4 +1,8 @@
-Extract the menu info from the provided menu image. Think step by step and make sure that you copy the relevant text verbatim, word by word, correctly. Use the same json structure output as provided in json-schema and json-example
+Extract the menu info from the provided menu image. 
+Think step by step and first identify the right hierarchical structure of the menu, scan it right to left the top to bottom, 
+map it to the same json structure output as provided in json-schema and json-example .
+Make sure that you copy the relevant text verbatim, word by word, correctly to the relevant location in the structure. 
+
 
 <json-schema>
 {
