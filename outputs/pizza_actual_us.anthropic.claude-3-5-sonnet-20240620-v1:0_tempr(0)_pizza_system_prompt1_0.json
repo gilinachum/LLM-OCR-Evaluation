@@ -1,4 +1,4 @@
-Here's the extracted menu information in the requested JSON format:
+I'll extract the menu information from the image and structure it according to the provided JSON schema. Here's the structured menu data:
 
 {
   "categories": [
@@ -26,53 +26,19 @@ Here's the extracted menu information in the requested JSON format:
           "price": 45
         },
         {
-          "name": "המלצת השף פיצה יווניתת",
+          "name": "המלצת השף פיצה יוונית",
           "price": 49,
           "description": "עגבניה,בצל,זיתים שחורים,בולגרית"
         }
       ],
       "extraInfo": [
-        "100% צהובה עמק",
-        "100% מוצרלה"
-      ]
-    },
-    {
-      "name": "סלטים",
-      "dishes": [
-        {
-          "name": "סלט בולגרית",
-          "price": 34,
-          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים שחורים ובולגרית"
-        },
-        {
-          "name": "סלט טונה",
-          "price": 34,
-          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים ירוקים וטונה"
-        }
-      ],
-      "extraInfo": [
-        "כל הסלטים מוגשים עם פיתה לבחירה"
+        "100% מוצרלה",
+        "100% צהובה",
+        "תוספת שומשום בקצוות הפיצה 2 ₪"
       ]
     },
     {
       "name": "תוספות",
-      "dishes": [
-        {
-          "name": "תוספת ביצה קשה לסלט",
-          "price": 3
-        },
-        {
-          "name": "שום, אלף האיים, צ'ילי מתוק",
-          "price": 1
-        },
-        {
-          "name": "רוטב פיצה, מיני טוסטר",
-          "price": 3
-        }
-      ]
-    },
-    {
-      "name": "לחם שום",
       "dishes": [
         {
           "name": "לחם שום אישי",
@@ -93,7 +59,42 @@ Here's the extracted menu information in the requested JSON format:
         {
           "name": "לחם שום הבית (L)",
           "price": 45,
-          "description": "(בתוספת צהובה, מוצרלה ובולגרית)"
+          "description": "(תוספת צהובה, מוצרלה ובולגרית)"
+        }
+      ]
+    },
+    {
+      "name": "סלטים",
+      "dishes": [
+        {
+          "name": "סלט בולגרית",
+          "price": 34,
+          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים שחורים ובולגרית"
+        },
+        {
+          "name": "סלט טונה",
+          "price": 34,
+          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים ירוקים וטונה"
+        }
+      ],
+      "extraInfo": [
+        "כל הסלטים מוגשים עם שמן זית ולימון לבחירה"
+      ]
+    },
+    {
+      "name": "תוספות לסלט",
+      "dishes": [
+        {
+          "name": "תוספת ביצה קשה לסלט",
+          "price": 3
+        },
+        {
+          "name": "שום, אלף האיים, צ'ילי מתוק",
+          "price": 1
+        },
+        {
+          "name": "רוטב פיצה, מיני טוסטר",
+          "price": 3
         }
       ]
     },
