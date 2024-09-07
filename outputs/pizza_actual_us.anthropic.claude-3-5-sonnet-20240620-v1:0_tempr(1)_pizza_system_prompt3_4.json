@@ -1,4 +1,4 @@
-I'll extract the menu information from the image and structure it according to the provided JSON schema. Here's the result:
+Here's the extracted menu information in JSON format based on the provided Hebrew menu image:
 
 {
   "categories": [
@@ -30,13 +30,19 @@ I'll extract the menu information from the image and structure it according to t
           "price": 49,
           "description": "עגבניה,בצל,זיתים שחורים,בולגרית"
         }
+      ],
+      "extraInfo": [
+        "100% מוצרלה",
+        "100% צהובה",
+        "עמק",
+        "תנובה"
       ]
     },
     {
       "name": "תוספות",
       "dishes": [
         {
-          "name": "תוספת שומשום בקצוות הפיצה",
+          "name": "תוספת שימוש בקצוות הפיצה",
           "price": 2
         }
       ]
@@ -63,7 +69,7 @@ I'll extract the menu information from the image and structure it according to t
         {
           "name": "לחם שום הבית (L)",
           "price": 45,
-          "description": "בתוספת עגבניה, מוצרלה ובולגרית"
+          "description": "(בתוספת גבינה, מוצרלה ובולגרית)"
         }
       ]
     },
@@ -78,31 +84,26 @@ I'll extract the menu information from the image and structure it according to t
         {
           "name": "סלט טונה",
           "price": 34,
-          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים ירוקים ופטה"
+          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים שחורים וטונה"
         }
       ],
       "extraInfo": [
-        "כל הסלטים מוגשים עם פיתה לבחירה"
+        "כל הסלטים מוגשים עם שמן זית ולימון סחוט"
       ]
     },
     {
-      "name": "תוספת בצק קשה לסלט",
+      "name": "תוספות לסלט",
       "dishes": [
         {
-          "name": "תוספת בצק קשה לסלט",
+          "name": "תוספת בצל קשוט לסלט",
           "price": 3
-        }
-      ]
-    },
-    {
-      "name": "תוספות",
-      "dishes": [
+        },
         {
           "name": "שום, אלף האיים, צ'ילי מתוק",
           "price": 1
         },
         {
-          "name": "רוטב פיצה, מיני טוסטר",
+          "name": "רוטב פיצה, מיני טוסטים",
           "price": 3
         }
       ]

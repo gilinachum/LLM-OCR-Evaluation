@@ -1,0 +1,94 @@
+Extract the structured menu info from the provided scanned Hebrew menu image. 
+Think step by step and first identify the menu's hierarchical structure, scan the menu right to left and top to bottom, 
+Output in json structure as provided in json-schema and json-example sections below.
+Note that the original text might have hebrew misspells, copy the text verbatim as is, place the text in the correct location in the json structure.
+Good luck!
+
+
+<json-schema>
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "dishes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "price"
+              ]
+            }
+          },
+          "extraInfo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "dishes"
+        ]
+      }
+    }
+  },
+  "required": [
+    "categories"
+  ]
+}
+</json-schema>
+
+<json-example>
+ {
+   "categories":[
+      {
+         "name":"מאפים",
+         "dishes":[
+            {
+               "name":"מלאווח",
+               "price":22,
+               "description":"אפוי מאוד"
+            },
+            {
+               "name":"מלאווח פיצה",
+               "price":28
+            }
+         ]
+      },
+      {
+         "name":"פסטה",
+         "dishes":[
+            {
+               "name":"פסטה טבע",
+               "price":49
+            },
+         ],
+         "extraInfo":[
+            "כל המנות מגיעות עם פרמז'ן בצד",
+            "לבחירה רוטב רוזה/אלפרדו"
+         ]
+      }
+   ]
+}
+</json-example>

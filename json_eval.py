@@ -2,7 +2,7 @@ import json
 from typing import Any, Dict, List, Tuple
 
 class DifferenceReport:
-    def __init__(self):
+    def __init__(self, expected_full_object = None):
         self.differences = []
 
     def add_difference(self, path: str, type: str, expected_value: Any, actual_value: Any):
@@ -24,6 +24,7 @@ class DifferenceReport:
                 print(f"  Expected Value 1: {diff['expected value']}")
                 print(f"  Actual Value 2: {diff['actual value']}")
                 print()
+
 
 def compare_json(expected: Dict[str, Any], actual: Dict[str, Any], path: str = "") -> Tuple[float, DifferenceReport]:
     total_score = 0
@@ -158,3 +159,41 @@ def extract_json_from_string(input_string):
     else:
         print("No JSON object found in the string")
         return None
+
+
+'''
+The function does the following:
+
+It defines a helper function set_nested to set values in nested dictionaries using a path string.
+It iterates through the update_data dictionary.
+For each path:
+
+If the type is 'Value Difference', it finds the highest numeric value and sets it in the JSON object.
+If the type is 'String Difference', it finds the most common string (the one with the highest count) and sets it in the JSON object.
+
+
+It returns the updated JSON object.
+'''
+from typing import Dict, Any
+def update_json_with_highest_values(json_obj: Dict[str, Any], update_data: Dict[str, Any]) -> Dict[str, Any]:
+    def set_nested(obj, path, value):
+        parts = path.replace(']', '').replace('[', '.').split('.')
+        for part in parts[:-1]:
+            if part.isdigit():
+                part = int(part)
+            obj = obj[part]
+        last_part = parts[-1]
+        if last_part.isdigit():
+            last_part = int(last_part)
+        obj[last_part] = value
+
+    for path, data in update_data.items():
+        if data['type'] == 'Value Difference':
+            highest_value = max(data['values'].keys())
+            set_nested(json_obj, path, highest_value)
+        elif data['type'] == 'String Difference':
+            highest_count = max(data['values'].values())
+            most_common_string = next(key for key, value in data['values'].items() if value == highest_count)
+            set_nested(json_obj, path, most_common_string)
+
+    return json_obj

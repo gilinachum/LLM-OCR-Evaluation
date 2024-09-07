@@ -1,4 +1,4 @@
-I'll extract the menu information from the image and structure it according to the provided JSON schema. Here's the structured menu data:
+I'll extract the structured menu information from the Hebrew menu image, going from right to left and top to bottom. Here's the JSON structure based on the provided schema:
 
 {
   "categories": [
@@ -26,16 +26,13 @@ I'll extract the menu information from the image and structure it according to t
           "price": 45
         },
         {
-          "name": "המלצת השף פיצה יווניתת",
+          "name": "המלצת השף פיצה יוונית",
           "price": 49,
           "description": "עגבניה,בצל,זיתים שחורים,בולגרית"
         }
       ],
       "extraInfo": [
-        "100% צהובה",
-        "100% מוצרלה",
-        "עמק",
-        "תוספת שומשום בקצוות הפיצה: 2 ₪"
+        "תוספת שומשום בקצוות הפיצה 2 ₪"
       ]
     },
     {
@@ -60,7 +57,7 @@ I'll extract the menu information from the image and structure it according to t
       "name": "תוספות",
       "dishes": [
         {
-          "name": "תוספת בצק קשה לסלט",
+          "name": "תוספת רוטב קשה לסלט",
           "price": 3
         },
         {
@@ -68,7 +65,7 @@ I'll extract the menu information from the image and structure it according to t
           "price": 1
         },
         {
-          "name": "רוטב פיצה, מיני טוסטר",
+          "name": "רוטב פיצה, מיני טונסין",
           "price": 3
         }
       ]
@@ -77,11 +74,11 @@ I'll extract the menu information from the image and structure it according to t
       "name": "מבחר שתיה קלה",
       "dishes": [
         {
-          "name": "שתייה 1.5 ליטר",
+          "name": "שתיה 1.5 ליטר",
           "price": 12
         },
         {
-          "name": "שתייה 0.5 ליטר",
+          "name": "שתיה 0.5 ליטר",
           "price": 9
         },
         {
@@ -112,7 +109,7 @@ I'll extract the menu information from the image and structure it according to t
         {
           "name": "לחם שום הבית (L)",
           "price": 45,
-          "description": "(תוספת צהובה, מוצרלה ובולגרית)"
+          "description": "בתוספת בצלים, מוצרלה ובולגרית"
         }
       ]
     }

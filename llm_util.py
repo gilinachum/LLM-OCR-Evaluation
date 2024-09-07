@@ -8,35 +8,35 @@ def generate_conversation(bedrock_client,
                           input_image):
 
     print(f"Generating message with model {model_id}")
+    # 1) Read the image bytes
     with open(input_image, "rb") as f:
-        image = f.read()
-    extension = input_image.split(".")[-1]
-    if extension == "jpg":
-        extension = "jpeg"
+        image_bytes = f.read()
+    img_extension = input_image.split(".")[-1]
+    if img_extension == "jpg":
+        img_extension = "jpeg"
 
+    # 2) Create a message(s) with text or image
     message = {
         "role": "user",
         "content": [
             {
                 "image": {
-                    "format": extension,
+                    "format": img_extension,
                     "source": {
-                        "bytes": image
+                        "bytes": image_bytes
                     }
                 }
             }
         ]
     }
 
-    messages = [message]
-
-    # Send the message.
+    # 3) Send the message using Converse API (same exact API for different model vendors + naitive tools support)
     response = bedrock_client.converse(
-        modelId=model_id,
-        messages=messages,
-        system=system_prompts,
-        inferenceConfig=inference_config,
-        #additionalModelRequestFields=additional_model_fields
+        modelId = model_id,
+        messages = [messages,],
+        system = system_prompts,
+        inferenceConfig = inference_config,
+        #additionalModelRequestFields = additional_model_fields
     )
 
     return response

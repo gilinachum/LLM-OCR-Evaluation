@@ -32,13 +32,11 @@ I'll extract the menu information from the image and structure it according to t
         }
       ],
       "extraInfo": [
-        "100% מוצרלה",
-        "100% צהובה",
         "תוספת שומשום בקצוות הפיצה 2 ₪"
       ]
     },
     {
-      "name": "תוספות",
+      "name": "לחם שום",
       "dishes": [
         {
           "name": "לחם שום אישי",
@@ -59,7 +57,7 @@ I'll extract the menu information from the image and structure it according to t
         {
           "name": "לחם שום הבית (L)",
           "price": 45,
-          "description": "(תוספת צהובה, מוצרלה ובולגרית)"
+          "description": "(בתוספת עגבניה, מוצרלה ובולגרית)"
         }
       ]
     },
@@ -78,14 +76,18 @@ I'll extract the menu information from the image and structure it according to t
         }
       ],
       "extraInfo": [
-        "כל הסלטים מוגשים עם שמן זית ולימון לבחירה"
+        "כל הסלטים מוגשים עם שמן זית ולימון לצדם"
       ]
     },
     {
-      "name": "תוספות לסלט",
+      "name": "תוספות",
       "dishes": [
         {
-          "name": "תוספת ביצה קשה לסלט",
+          "name": "תוספת רוטב צ'ילי",
+          "price": 1
+        },
+        {
+          "name": "תוספת בצל קצוץ לסלט",
           "price": 3
         },
         {

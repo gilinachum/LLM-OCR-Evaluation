@@ -1,0 +1,105 @@
+Task: Extract structured menu information from a scanned Hebrew menu image.
+
+You are an expert in text extraction. Your task is to carefully analyze and extract all relevant data from the provided scanned Hebrew menu image. Follow these guidelines:
+
+    Process Flow:
+        First, identify the hierarchical structure of the menu (categories, subcategories, items, etc.).
+        Work through the menu from right to left and top to bottom as per the Hebrew reading order.
+        Preserve all original text exactly as is, including any Hebrew misspellings or typographical errors.
+
+    Output Format:
+        The extracted data must be output in JSON format, adhering strictly to the provided JSON schema (see schema and example sections below).
+        Ensure the text is correctly placed within the relevant categories or fields based on the menu structure.
+
+    Important Notes:
+        Your goal is to accurately represent the menu’s content and structure.
+        Pay attention to formatting and the positioning of the text to ensure that the output mirrors the original menu’s layout.
+
+
+<json-schema>
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "dishes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "price"
+              ]
+            }
+          },
+          "extraInfo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "dishes"
+        ]
+      }
+    }
+  },
+  "required": [
+    "categories"
+  ]
+}
+</json-schema>
+
+<json-example>
+ {
+   "categories":[
+      {
+         "name":"מאפים",
+         "dishes":[
+            {
+               "name":"מלאווח",
+               "price":22,
+               "description":"אפוי מאוד"
+            },
+            {
+               "name":"מלאווח פיצה",
+               "price":28
+            }
+         ]
+      },
+      {
+         "name":"פסטה",
+         "dishes":[
+            {
+               "name":"פסטה טבע",
+               "price":49
+            },
+         ],
+         "extraInfo":[
+            "כל המנות מגיעות עם פרמז'ן בצד",
+            "לבחירה רוטב רוזה/אלפרדו"
+         ]
+      }
+   ]
+}
+</json-example>

@@ -1,4 +1,4 @@
-I'll extract the menu information from the image and structure it according to the provided JSON schema. Here's the menu content organized into the requested format:
+Here's the structured menu information extracted from the provided Hebrew menu image:
 
 {
   "categories": [
@@ -30,9 +30,15 @@ I'll extract the menu information from the image and structure it according to t
           "price": 49,
           "description": "עגבניה,בצל,זיתים שחורים,בולגרית"
         }
-      ],
-      "extraInfo": [
-        "תוספת שומשום בקצוות הפיצה 2 ₪"
+      ]
+    },
+    {
+      "name": "תוספות",
+      "dishes": [
+        {
+          "name": "תוספת שימוש בקצות הפיצה",
+          "price": 2
+        }
       ]
     },
     {
@@ -57,7 +63,7 @@ I'll extract the menu information from the image and structure it according to t
         {
           "name": "לחם שום הבית (L)",
           "price": 45,
-          "description": "(בתוספת בצקה, מוצרלה ובולגרית)"
+          "description": "בתוספת גבינה, מוצרלה ובולגרית"
         }
       ]
     },
@@ -72,18 +78,18 @@ I'll extract the menu information from the image and structure it according to t
         {
           "name": "סלט טונה",
           "price": 34,
-          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים שחורים וטונה"
+          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים ירוקים וטונה"
         }
       ],
       "extraInfo": [
-        "כל הסלטים מוגשים עם שמן זית ולימון לפזירה"
+        "כל הסלטים מוגשים עם שמן זית ולימון לבחירה"
       ]
     },
     {
-      "name": "תוספות",
+      "name": "תוספות לסלט",
       "dishes": [
         {
-          "name": "תוספת בצק קשה לסלט",
+          "name": "תוספת בצל קצוץ לסלט",
           "price": 3
         },
         {
@@ -91,7 +97,7 @@ I'll extract the menu information from the image and structure it according to t
           "price": 1
         },
         {
-          "name": "רוטב פיצה, מיני טוסקן",
+          "name": "רוטב פיצה, מיני טוסטר",
           "price": 3
         }
       ]
