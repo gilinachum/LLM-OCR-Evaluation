@@ -1,4 +1,4 @@
-I'll extract the menu information from the image and structure it according to the provided JSON schema. I'll go through the menu from right to left and top to bottom, as it's written in Hebrew.
+Here's the extracted menu information in JSON format based on the provided image:
 
 {
   "categories": [
@@ -29,37 +29,11 @@ I'll extract the menu information from the image and structure it according to t
           "name": "המלצת השף פיצה יוונית",
           "price": 49,
           "description": "עגבניה,בצל,זיתים שחורים,בולגרית"
-        },
-        {
-          "name": "תוספת שומשום בקצוות הפיצה",
-          "price": 2
         }
-      ]
-    },
-    {
-      "name": "לחם שום",
-      "dishes": [
-        {
-          "name": "לחם שום אישי",
-          "price": 15
-        },
-        {
-          "name": "לחם שום אישי מוקרם",
-          "price": 18
-        },
-        {
-          "name": "לחם שום משפחתי",
-          "price": 26
-        },
-        {
-          "name": "לחם שום משפחתי מוקרם",
-          "price": 33
-        },
-        {
-          "name": "לחם שום הבית (L)",
-          "price": 45,
-          "description": "(בתוספת עגבניה, מוצרלה ובולגרית)"
-        }
+      ],
+      "extraInfo": [
+        "100% צהובה",
+        "100% מוצרלה"
       ]
     },
     {
@@ -92,8 +66,34 @@ I'll extract the menu information from the image and structure it according to t
           "price": 1
         },
         {
-          "name": "רוטב פיצה, מיני טוסקן",
+          "name": "רוטב פיצה, מיני טוסטר",
           "price": 3
+        }
+      ]
+    },
+    {
+      "name": "לחם שום אישי",
+      "dishes": [
+        {
+          "name": "לחם שום אישי",
+          "price": 15
+        },
+        {
+          "name": "לחם שום אישי מוקרם",
+          "price": 18
+        },
+        {
+          "name": "לחם שום משפחתי",
+          "price": 26
+        },
+        {
+          "name": "לחם שום משפחתי מוקרם",
+          "price": 33
+        },
+        {
+          "name": "לחם שום הבית (L)",
+          "price": 45,
+          "description": "בתוספת עגבניה, מוצרלה ובולגרית"
         }
       ]
     },

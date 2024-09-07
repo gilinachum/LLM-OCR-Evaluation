@@ -1,4 +1,4 @@
-import boto3
+import boto3, botocore
 import json
 
 def generate_conversation(bedrock_client,
@@ -33,12 +33,11 @@ def generate_conversation(bedrock_client,
     # 3) Send the message using Converse API (same exact API for different model vendors + naitive tools support)
     response = bedrock_client.converse(
         modelId = model_id,
-        messages = [messages,],
+        messages = [message,],
         system = system_prompts,
         inferenceConfig = inference_config,
         #additionalModelRequestFields = additional_model_fields
     )
-
     return response
 
 
@@ -52,7 +51,7 @@ def get_ocr(test):
     instructions = open(f"./prompts/{instructions_filename}", "r").read()
     system_prompts = [{"text": instructions}]
 
-    bedrock_client = boto3.client('bedrock-runtime',region_name='us-east-1')
+    bedrock_client = boto3.client('bedrock-runtime',region_name='us-east-1', config = botocore.config.Config(retries=dict(max_attempts=10)))
     response = generate_conversation(
         bedrock_client, model_id, system_prompts, inference_config, input_image)
 

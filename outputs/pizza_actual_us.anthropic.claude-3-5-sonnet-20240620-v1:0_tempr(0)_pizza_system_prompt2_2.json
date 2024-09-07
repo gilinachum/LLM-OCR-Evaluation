@@ -1,4 +1,4 @@
-Here's the structured menu information extracted from the provided Hebrew menu image:
+I'll extract the menu information from the Hebrew image and structure it according to the provided JSON schema. Here's the structured menu data:
 
 {
   "categories": [
@@ -30,15 +30,9 @@ Here's the structured menu information extracted from the provided Hebrew menu i
           "price": 49,
           "description": "עגבניה,בצל,זיתים שחורים,בולגרית"
         }
-      ]
-    },
-    {
-      "name": "תוספות",
-      "dishes": [
-        {
-          "name": "תוספת שימוש בקצות הפיצה",
-          "price": 2
-        }
+      ],
+      "extraInfo": [
+        "תוספת שומשום בקצוות הפיצה 2 ₪"
       ]
     },
     {
@@ -63,7 +57,7 @@ Here's the structured menu information extracted from the provided Hebrew menu i
         {
           "name": "לחם שום הבית (L)",
           "price": 45,
-          "description": "בתוספת גבינה, מוצרלה ובולגרית"
+          "description": "(בתוספת גבינה, מוצרלה ובולגרית)"
         }
       ]
     },
@@ -86,10 +80,10 @@ Here's the structured menu information extracted from the provided Hebrew menu i
       ]
     },
     {
-      "name": "תוספות לסלט",
+      "name": "תוספות",
       "dishes": [
         {
-          "name": "תוספת בצל קצוץ לסלט",
+          "name": "תוספת בצק קשה לסלט",
           "price": 3
         },
         {

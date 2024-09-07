@@ -1,4 +1,4 @@
-I'll extract the structured menu information from the Hebrew menu image, going from right to left and top to bottom. Here's the JSON structure based on the provided schema:
+I'll extract the menu information from the Hebrew image and structure it according to the provided JSON schema. Here's the structured menu data:
 
 {
   "categories": [
@@ -36,58 +36,6 @@ I'll extract the structured menu information from the Hebrew menu image, going f
       ]
     },
     {
-      "name": "סלטים",
-      "dishes": [
-        {
-          "name": "סלט בולגרית",
-          "price": 34,
-          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים שחורים ובולגרית"
-        },
-        {
-          "name": "סלט טונה",
-          "price": 34,
-          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים ירוקים וטונה"
-        }
-      ],
-      "extraInfo": [
-        "כל הסלטים מוגשים עם פיתה לבנה"
-      ]
-    },
-    {
-      "name": "תוספות",
-      "dishes": [
-        {
-          "name": "תוספת רוטב קשה לסלט",
-          "price": 3
-        },
-        {
-          "name": "שום, אלף האיים, צ'ילי מתוק",
-          "price": 1
-        },
-        {
-          "name": "רוטב פיצה, מיני טונסין",
-          "price": 3
-        }
-      ]
-    },
-    {
-      "name": "מבחר שתיה קלה",
-      "dishes": [
-        {
-          "name": "שתיה 1.5 ליטר",
-          "price": 12
-        },
-        {
-          "name": "שתיה 0.5 ליטר",
-          "price": 9
-        },
-        {
-          "name": "טרופית",
-          "price": 2
-        }
-      ]
-    },
-    {
       "name": "לחם שום",
       "dishes": [
         {
@@ -109,7 +57,59 @@ I'll extract the structured menu information from the Hebrew menu image, going f
         {
           "name": "לחם שום הבית (L)",
           "price": 45,
-          "description": "בתוספת בצלים, מוצרלה ובולגרית"
+          "description": "בתוספת מוצרלה ובולגרית"
+        }
+      ]
+    },
+    {
+      "name": "סלטים",
+      "dishes": [
+        {
+          "name": "סלט בולגרית",
+          "price": 34,
+          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים שחורים ובולגרית"
+        },
+        {
+          "name": "סלט טונה",
+          "price": 34,
+          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים ירוקים וטונה"
+        }
+      ],
+      "extraInfo": [
+        "כל הסלטים מוגשים עם פיתה לאפה טרייה"
+      ]
+    },
+    {
+      "name": "תוספות",
+      "dishes": [
+        {
+          "name": "תוספת בצק קשה לסלט",
+          "price": 3
+        },
+        {
+          "name": "שום, אלף האיים, צ'ילי מתוק",
+          "price": 1
+        },
+        {
+          "name": "רוטב פיצה, מיני טוסטר",
+          "price": 3
+        }
+      ]
+    },
+    {
+      "name": "מבחר שתיה קלה",
+      "dishes": [
+        {
+          "name": "שתיה 1.5 ליטר",
+          "price": 12
+        },
+        {
+          "name": "שתיה 0.5 ליטר",
+          "price": 9
+        },
+        {
+          "name": "טרופית",
+          "price": 2
         }
       ]
     }

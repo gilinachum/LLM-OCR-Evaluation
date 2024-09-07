@@ -1,4 +1,4 @@
-I'll extract the menu information from the image and structure it according to the provided JSON schema. I'll go through the menu from right to left and top to bottom, as it's written in Hebrew.
+Here's the extracted menu information in JSON format based on the provided image:
 
 {
   "categories": [
@@ -29,11 +29,12 @@ I'll extract the menu information from the image and structure it according to t
           "name": "המלצת השף פיצה יוונית",
           "price": 49,
           "description": "עגבניה,בצל,זיתים שחורים,בולגרית"
-        },
-        {
-          "name": "תוספת שומשום בקצוות הפיצה",
-          "price": 2
         }
+      ],
+      "extraInfo": [
+        "100% מוצרלה",
+        "100% צהובה",
+        "תוספת שומשום בקצוות הפיצה 2 ₪"
       ]
     },
     {
@@ -77,14 +78,14 @@ I'll extract the menu information from the image and structure it according to t
         }
       ],
       "extraInfo": [
-        "כל הסלטים מוגשים עם פיתה לבנה"
+        "כל הסלטים מוגשים עם פיתה לבחירה"
       ]
     },
     {
       "name": "תוספות",
       "dishes": [
         {
-          "name": "תוספת רוטב קשיו לסלט",
+          "name": "תוספת ביצה קשה לסלט",
           "price": 3
         },
         {
@@ -92,7 +93,7 @@ I'll extract the menu information from the image and structure it according to t
           "price": 1
         },
         {
-          "name": "רוטב פיצה, מיני טוסקן",
+          "name": "רוטב פיצה, מיני טוסטר",
           "price": 3
         }
       ]

@@ -1,4 +1,4 @@
-I'll extract the menu information from the image and structure it according to the provided JSON schema. Here's the structured menu data:
+I'll extract the menu information from the image and structure it according to the provided JSON schema. I'll go through the menu from right to left and top to bottom, as it's in Hebrew.
 
 {
   "categories": [
@@ -76,18 +76,14 @@ I'll extract the menu information from the image and structure it according to t
         }
       ],
       "extraInfo": [
-        "כל הסלטים מוגשים עם שמן זית ולימון לצדם"
+        "כל הסלטים מוגשים עם פיתה לבחירה"
       ]
     },
     {
       "name": "תוספות",
       "dishes": [
         {
-          "name": "תוספת רוטב צ'ילי",
-          "price": 1
-        },
-        {
-          "name": "תוספת בצל קצוץ לסלט",
+          "name": "תוספת בצק קשה לסלט",
           "price": 3
         },
         {
