@@ -1,64 +1,89 @@
-I'll extract the menu information from the image and structure it according to the provided JSON schema. I'll go through the menu from right to left and top to bottom, as it's written in Hebrew.
+I'll provide a structured summary of the menu information from the image, following the requested JSON format:
 
 {
   "categories": [
     {
-      "name": "תפריט",
+      "name": "פיצות",
       "dishes": [
         {
-          "name": "פיצה אישית (S)",
-          "price": 20
+          "name": "פיצה אישית",
+          "price": 23
         },
         {
-          "name": "פיצה משפחתית (L)",
-          "price": 29
+          "name": "פיצה משפחתית",
+          "price": 42
         },
         {
-          "name": "פיצה ענקית (XL)",
-          "price": 49
-        },
-        {
-          "name": "משפחתית טבעונית",
-          "price": 40
+          "name": "פיצה ענקית",
+          "price": 65
         },
         {
           "name": "משפחתית ללא גלוטן",
-          "price": 45
+          "price": 50
         },
         {
-          "name": "המלצת השף פיצה יוונית",
-          "price": 49,
-          "description": "עגבניה,בצל,זיתים שחורים,בולגרית"
+          "name": "משפחתית טבעונית",
+          "price": 48
         },
         {
-          "name": "תוספת שומשום בקצוות הפיצה",
-          "price": 2
+          "name": "פיצה בדרוס",
+          "price": 70
+        },
+        {
+          "name": "פיצה מיוחדת",
+          "price": 70,
+          "description": "מיקס גבינות, שום קונפי, קישואים, זיתים, אספרגוס טרי"
+        },
+        {
+          "name": "לאסאנה חריפה אש",
+          "price": 78,
+          "description": "טרטופו, שיטקי, גבינה, בלאק פרמז'ן"
         }
       ]
     },
     {
-      "name": "לחם שום",
+      "name": "משהו בצד",
       "dishes": [
         {
-          "name": "לחם שום אישי",
-          "price": 15
+          "name": "לחם שום מסורתי",
+          "price": 17
         },
         {
-          "name": "לחם שום אישי מוקרם",
-          "price": 18
+          "name": "לחם פסטוק",
+          "price": 23
         },
         {
-          "name": "לחם שום משפחתי",
-          "price": 26
+          "name": "פיצה שוקולד",
+          "price": 32
+        }
+      ]
+    },
+    {
+      "name": "שתיה",
+      "dishes": [
+        {
+          "name": "מים",
+          "price": 8
         },
         {
-          "name": "לחם שום משפחתי מוקרם",
-          "price": 33
+          "name": "קולה / זירו",
+          "price": 14
         },
         {
-          "name": "לחם שום הבית (L)",
-          "price": 45,
-          "description": "(בתוספת עגבניה, מוצרלה ובולגרית)"
+          "name": "ספרייט",
+          "price": 14
+        },
+        {
+          "name": "סודה",
+          "price": 10
+        },
+        {
+          "name": "תפוזים / ענבים",
+          "price": 12
+        },
+        {
+          "name": "בירה 0.5",
+          "price": 25
         }
       ]
     },
@@ -66,53 +91,28 @@ I'll extract the menu information from the image and structure it according to t
       "name": "סלטים",
       "dishes": [
         {
-          "name": "סלט בולגרית",
-          "price": 34,
-          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים שחורים ובולגרית"
+          "name": "סלט יווני",
+          "price": 49
+        },
+        {
+          "name": "סלט בולגרי",
+          "price": 49
+        },
+        {
+          "name": "סלט עדשים",
+          "price": 45
         },
         {
           "name": "סלט טונה",
-          "price": 34,
-          "description": "חסה, מלפפון, עגבניות שרי, תירס, זיתים ירוקים וטונה"
-        }
-      ],
-      "extraInfo": [
-        "כל הסלטים מוגשים עם פיתה לבנה"
-      ]
-    },
-    {
-      "name": "תוספות",
-      "dishes": [
-        {
-          "name": "תוספת רוטב קשיו לסלט",
-          "price": 3
-        },
-        {
-          "name": "שום, אלף האיים, צ'ילי מתוק",
-          "price": 1
-        },
-        {
-          "name": "רוטב פיצה, מיני טוסקן",
-          "price": 3
-        }
-      ]
-    },
-    {
-      "name": "מבחר שתיה קלה",
-      "dishes": [
-        {
-          "name": "שתיה 1.5 ליטר",
-          "price": 12
-        },
-        {
-          "name": "שתיה 0.5 ליטר",
-          "price": 9
-        },
-        {
-          "name": "טרופית",
-          "price": 2
+          "price": 40
         }
       ]
     }
+  ],
+  "extraInfo": [
+    "האפייה בתנור אבן",
+    "כל הפיצות שלנו עם 100% מוצרלה"
   ]
 }
+
+This structured representation captures the menu items, prices, and additional information as presented in the image, organized into categories as specified in the JSON schema.

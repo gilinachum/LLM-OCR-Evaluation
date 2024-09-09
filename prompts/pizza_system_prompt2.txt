@@ -1,7 +1,10 @@
 Extract the structured menu info from the provided scanned Hebrew menu image. 
-Think step by step and first identify the menu's hierarchical structure, scan the menu right to left and top to bottom, 
-Output in json structure as provided in json-schema and json-example sections below.
-Note that the original text might have hebrew misspells, copy the text verbatim as is, place the text in the correct location in the json structure.
+Follow these steps:
+1. Analyze the image carefully, scanning from right to left and top to bottom, as Hebrew is read in this direction.
+2. Identify the menu's hierarchical structure (e.g., categories, subcategories, items, prices).
+3. Recognize and transcribe the Hebrew text exactly as it appears, including any potential misspellings.
+4. Output in json structure as provided in json-schema and json-example sections below.
+5. Note that the original text might have hebrew misspells, copy the text verbatim as is, place the text in the correct location in the json structure.
 Good luck!
 
 
@@ -51,7 +54,13 @@ Good luck!
           "dishes"
         ]
       }
-    }
+    },
+    "extraInfo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
   },
   "required": [
     "categories"
@@ -89,6 +98,9 @@ Good luck!
             "לבחירה רוטב רוזה/אלפרדו"
          ]
       }
-   ]
+   ],
+   "extraInfo":[
+            "עלול להכיל אלרגנים",
+         ]
 }
 </json-example>

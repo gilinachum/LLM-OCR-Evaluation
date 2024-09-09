@@ -2,6 +2,7 @@ Extract the menu info from the provided menu image.
 Think step by step and first identify the right hierarchical structure of the menu, scan it right to left the top to bottom, 
 map it to the same json structure output as provided in json-schema and json-example .
 Make sure that you copy the relevant text verbatim, word by word, correctly to the relevant location in the structure. 
+Be aware that some text may contain Hebrew words or other terms that are not found in a standard dictionary. In such cases, do not attempt to infer or substitute similar words—copy the text exactly as it appears.
 
 
 <json-schema>
@@ -50,7 +51,13 @@ Make sure that you copy the relevant text verbatim, word by word, correctly to t
           "dishes"
         ]
       }
-    }
+    },
+    "extraInfo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
   },
   "required": [
     "categories"
@@ -88,6 +95,9 @@ Make sure that you copy the relevant text verbatim, word by word, correctly to t
             "לבחירה רוטב רוזה/אלפרדו"
          ]
       }
-   ]
+   ],
+   "extraInfo":[
+            "עלול להכיל אלרגנים",
+         ]
 }
 </json-example>

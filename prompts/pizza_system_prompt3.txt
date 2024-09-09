@@ -62,7 +62,13 @@ You are an expert in text extraction. Your task is to carefully analyze and extr
           "dishes"
         ]
       }
-    }
+    },
+    "extraInfo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
   },
   "required": [
     "categories"
@@ -100,6 +106,9 @@ You are an expert in text extraction. Your task is to carefully analyze and extr
             "לבחירה רוטב רוזה/אלפרדו"
          ]
       }
-   ]
+   ],
+   "extraInfo":[
+            "עלול להכיל אלרגנים",
+         ]
 }
 </json-example>

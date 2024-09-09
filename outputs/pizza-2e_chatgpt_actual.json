@@ -1,5 +1,3 @@
-I understand you want me to extract the menu information from the provided image and structure it according to the given JSON schema. I'll do my best to accurately transcribe the menu items while maintaining the specified structure. Here's the extracted menu information:
-
 {
   "categories": [
     {
@@ -30,15 +28,19 @@ I understand you want me to extract the menu information from the provided image
           "price": 70
         },
         {
-          "name": "פיצה מיוחדת",
+          "name": "מיוחדת פיצה סיציליאנית",
           "price": 70,
-          "description": "טירלי נבונה, שום קונפי, קישואים, זיתים, אספרגוס, בזיליקום"
+          "description": "מיקס גבינות, שום גבינה, קממבר, ריקוטה, פרמז'ן, אקסטרה מוצרלה"
         },
         {
-          "name": "לאצמצה חריפה אש",
+          "name": "לאצ'יצים חיפה אש",
           "price": 78,
-          "description": "טבסקו, שיפקה, נגיעות בלסמי פרמז'ן"
+          "description": "טבסקו, שקנפף, חלפיניו, ברבקיו, רק אולין פסטו"
         }
+      ],
+      "extraInfo": [
+        "האפייה בתנור אבן",
+        "כל הפיצות שלנו עם 100% מוצרלה"
       ]
     },
     {
@@ -49,7 +51,7 @@ I understand you want me to extract the menu information from the provided image
           "price": 17
         },
         {
-          "name": "לחם נפוליק",
+          "name": "לחם פנקייק",
           "price": 23
         },
         {
@@ -59,7 +61,7 @@ I understand you want me to extract the menu information from the provided image
       ]
     },
     {
-      "name": "שתיה",
+      "name": "שתייה",
       "dishes": [
         {
           "name": "מים",
@@ -67,10 +69,10 @@ I understand you want me to extract the menu information from the provided image
         },
         {
           "name": "קולה / זירו",
-          "price": 14
+          "price": 10
         },
         {
-          "name": "ספרייט",
+          "name": "ספייט",
           "price": 14
         },
         {
@@ -78,7 +80,7 @@ I understand you want me to extract the menu information from the provided image
           "price": 10
         },
         {
-          "name": "תפוזים / ענבים",
+          "name": "תפוחים / ענבים",
           "price": 12
         },
         {
@@ -95,11 +97,11 @@ I understand you want me to extract the menu information from the provided image
           "price": 49
         },
         {
-          "name": "סלט בולגרי",
+          "name": "סלט בולגר",
           "price": 49
         },
         {
-          "name": "סלט עיראקי",
+          "name": "סלט טבולה",
           "price": 45
         },
         {
@@ -110,7 +112,6 @@ I understand you want me to extract the menu information from the provided image
     }
   ],
   "extraInfo": [
-    "האפייה בתנור אבן",
     "כל הפיצות שלנו עם 100% מוצרלה"
   ]
 }
