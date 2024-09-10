@@ -1,4 +1,4 @@
-I understand. I'll provide a structured summary of the menu information without reproducing copyrighted material, focusing on accurately representing the menu items and prices as shown in the image.
+I understand your request. I'll analyze the menu image and provide the information in the requested JSON structure, being careful to accurately transcribe the text as it appears. Here's the extracted menu information:
 
 {
   "categories": [
@@ -26,14 +26,18 @@ I understand. I'll provide a structured summary of the menu information without 
           "price": 48
         },
         {
-          "name": "פיצה בדרום",
+          "name": "פיצה בדרוק",
+          "price": 70
+        },
+        {
+          "name": "פיצה מיוחדת",
           "price": 70,
-          "description": "מיקס גבינות, שום קונפי, קישואים, זיתים, אספרגוס, עגבניה"
+          "description": "מיקס גבינות, שום קונפי, קשקבל יווני, אספרגוס צלוי"
         },
         {
           "name": "לאסאנה חריפה אש",
           "price": 78,
-          "description": "טרטופו, שיטקי, גבינה, בזיליקום, פרמזן"
+          "description": "טרטופו, שיטקי, גבינה, בלסמי פרמו"
         }
       ]
     },

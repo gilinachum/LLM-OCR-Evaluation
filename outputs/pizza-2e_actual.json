@@ -26,7 +26,7 @@ I understand your request. I'll analyze the menu image and provide the informati
           "price": 48
         },
         {
-          "name": "פיצה בדרום",
+          "name": "פיצה בדרוס",
           "price": 70
         },
         {
@@ -35,9 +35,9 @@ I understand your request. I'll analyze the menu image and provide the informati
           "description": "מיקס גבינות, שום קונפי, קשקבל יווני, אספרגוס צלוי, בלסמי"
         },
         {
-          "name": "לאסנייה חריפה אש",
+          "name": "לאסאנה חריפה אש",
           "price": 78,
-          "description": "טרטופו, שיטקי, גבינה, בלסמי, פרמז'ן"
+          "description": "עגבניות, שיטקי, גבינה, בזיליקום פרמזן"
         }
       ]
     },
@@ -49,7 +49,7 @@ I understand your request. I'll analyze the menu image and provide the informati
           "price": 17
         },
         {
-          "name": "לחם נפוליק",
+          "name": "לחם פסטוק",
           "price": 23
         },
         {
@@ -66,7 +66,7 @@ I understand your request. I'll analyze the menu image and provide the informati
           "price": 8
         },
         {
-          "name": "קולה / זירו",
+          "name": "קולה / דיאט",
           "price": 14
         },
         {

@@ -32,13 +32,16 @@ I'll provide a structured summary of the menu information from the image, follow
         {
           "name": "פיצה מיוחדת",
           "price": 70,
-          "description": "מיקס גבינות, שום קונפי, קישואים, זיתים, אספרגוס טרי"
+          "description": "מלית בשר, שום קונפי, קישואים צלויים, אספרגוס צלוי, בזיליקום"
         },
         {
-          "name": "לאסאנה חריפה אש",
+          "name": "לאצ'נרה חריפה אש",
           "price": 78,
-          "description": "טרטופו, שיטקי, גבינה, בלאק פרמז'ן"
+          "description": "טונה סן, שיפקה, בולגרית, בצל אדום, פלפל חריף"
         }
+      ],
+      "extraInfo": [
+        "האפייה בתנור אבן"
       ]
     },
     {
@@ -49,7 +52,7 @@ I'll provide a structured summary of the menu information from the image, follow
           "price": 17
         },
         {
-          "name": "לחם פסטוק",
+          "name": "לחם נפוליטני",
           "price": 23
         },
         {
@@ -66,7 +69,7 @@ I'll provide a structured summary of the menu information from the image, follow
           "price": 8
         },
         {
-          "name": "קולה / זירו",
+          "name": "קולה / דיאט",
           "price": 14
         },
         {
@@ -99,7 +102,7 @@ I'll provide a structured summary of the menu information from the image, follow
           "price": 49
         },
         {
-          "name": "סלט עדשים",
+          "name": "סלט עלי בייבי",
           "price": 45
         },
         {
@@ -110,9 +113,8 @@ I'll provide a structured summary of the menu information from the image, follow
     }
   ],
   "extraInfo": [
-    "האפייה בתנור אבן",
     "כל הפיצות שלנו עם 100% מוצרלה"
   ]
 }
 
-This structured representation captures the menu items, prices, and additional information as presented in the image, organized into categories as specified in the JSON schema.
+This structured JSON representation captures the menu items, categories, prices, and additional information as displayed in the image.

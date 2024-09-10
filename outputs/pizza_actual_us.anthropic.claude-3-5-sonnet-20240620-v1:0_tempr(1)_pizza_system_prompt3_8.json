@@ -1,6 +1,5 @@
-Here's the structured JSON representation of the menu information from the provided Hebrew menu image:
+Here's the structured JSON representation of the menu based on the provided image:
 
-```json
 {
   "categories": [
     {
@@ -31,14 +30,14 @@ Here's the structured JSON representation of the menu information from the provi
           "price": 70
         },
         {
-          "name": "פיצה מיוחדת",
+          "name": "מיוחדת פיצה סיציליאנית",
           "price": 70,
-          "description": "מיקס גבינות, שום בזיליקום, קונפיט שרי, אספרגוס צרוב"
+          "description": "מלבנית, שום קונפי, קרעי חלומי, אנשובי, בזיליקום"
         },
         {
-          "name": "לאסנייה חריפה אש",
+          "name": "לאצמצ'ו חריפה אש",
           "price": 78,
-          "description": "טרטר בקר, שירימפס, גבינה, בצקים, פרמז'ן"
+          "description": "טבסקו, שיטקי, נדוג'ה, בצל אדום, פרמזן"
         }
       ]
     },
@@ -50,7 +49,7 @@ Here's the structured JSON representation of the menu information from the provi
           "price": 17
         },
         {
-          "name": "לחם פנצ'טה",
+          "name": "לחם נפוליטני",
           "price": 23
         },
         {
@@ -67,7 +66,7 @@ Here's the structured JSON representation of the menu information from the provi
           "price": 8
         },
         {
-          "name": "קולה / דיאט",
+          "name": "קולה / זירו",
           "price": 14
         },
         {
@@ -100,7 +99,7 @@ Here's the structured JSON representation of the menu information from the provi
           "price": 49
         },
         {
-          "name": "סלט עדשים",
+          "name": "סלט עיזקאי",
           "price": 45
         },
         {
@@ -115,6 +114,3 @@ Here's the structured JSON representation of the menu information from the provi
     "כל הפיצות שלנו עם 100% מוצרלה"
   ]
 }
-```
-
-This JSON structure accurately represents the menu information from the provided Hebrew menu image, including categories, dishes, prices, and additional information.

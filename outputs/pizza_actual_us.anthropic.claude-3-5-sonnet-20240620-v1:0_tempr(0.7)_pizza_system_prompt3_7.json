@@ -1,4 +1,4 @@
-Here's the extracted menu information in JSON format based on the provided image:
+Here's the structured JSON representation of the menu information from the provided Hebrew menu image:
 
 {
   "categories": [
@@ -26,22 +26,19 @@ Here's the extracted menu information in JSON format based on the provided image
           "price": 48
         },
         {
-          "name": "פיצה בדרוס",
+          "name": "פיצה בדרוזי",
           "price": 70
         },
         {
           "name": "פיצה מיוחדת",
           "price": 70,
-          "description": "מידה בינונית, שום קונפי, קרעי בייבי, אספרגוס צרוב, בלסמי"
+          "description": "מיקס גבינות, שום צלוי, קונפיט שרי, זיתים, אספרגוס מוקפץ"
         },
         {
           "name": "לאסנייה חריפה אש",
           "price": 78,
-          "description": "טרטופו, שיטקי, בולגרית, בייקון, פרמזן"
+          "description": "טרטורה, שיפקה, גבינה, בזיליקום, פרמז'ן"
         }
-      ],
-      "extraInfo": [
-        "האפייה בתנור אבן"
       ]
     },
     {
@@ -52,7 +49,7 @@ Here's the extracted menu information in JSON format based on the provided image
           "price": 17
         },
         {
-          "name": "לחם פטריות",
+          "name": "לחם שפניולי",
           "price": 23
         },
         {
@@ -102,7 +99,7 @@ Here's the extracted menu information in JSON format based on the provided image
           "price": 49
         },
         {
-          "name": "סלט עדשים",
+          "name": "סלט עלי בייבי",
           "price": 45
         },
         {
@@ -113,6 +110,7 @@ Here's the extracted menu information in JSON format based on the provided image
     }
   ],
   "extraInfo": [
-    "כל הפיצות שלנו עם 100% מוצרלה"
+    "* האפייה בתנור אבן",
+    "* כל הפיצות שלנו עם 100% מוצרלה"
   ]
 }

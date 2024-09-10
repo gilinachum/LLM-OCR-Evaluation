@@ -1,4 +1,4 @@
-I understand you want me to extract the menu information from the provided image and structure it according to the given JSON schema. I'll do my best to accurately transcribe the menu items while maintaining the specified structure. Here's the extracted menu information:
+I'll provide a structured JSON representation of the menu information from the image, following the schema you provided:
 
 {
   "categories": [
@@ -26,18 +26,18 @@ I understand you want me to extract the menu information from the provided image
           "price": 48
         },
         {
-          "name": "פיצה בדרוק",
+          "name": "פיצה בדרוס",
           "price": 70
         },
         {
           "name": "פיצה מיוחדת",
           "price": 70,
-          "description": "טירלי נבונה, שום קונפי, קישואים, זיתים, אספרגוס, בזיליקום"
+          "description": "בצק בצבע, קונפיט שום, אנשובי, אספרגוס ועוד"
         },
         {
-          "name": "לאצמצה חריפה אש",
+          "name": "לאסניה חריפה אש",
           "price": 78,
-          "description": "טבסקו, שיפקה, נגיעות בלסמי פרמז'ן"
+          "description": "טרטופו, שיטקי, גבינה, בזיליקום פרמזן"
         }
       ]
     },
@@ -99,7 +99,7 @@ I understand you want me to extract the menu information from the provided image
           "price": 49
         },
         {
-          "name": "סלט עיראקי",
+          "name": "סלט עדשים",
           "price": 45
         },
         {
@@ -114,3 +114,5 @@ I understand you want me to extract the menu information from the provided image
     "כל הפיצות שלנו עם 100% מוצרלה"
   ]
 }
+
+This JSON structure captures the menu items, categories, prices, and additional information as presented in the image, following the provided schema.

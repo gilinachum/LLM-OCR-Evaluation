@@ -37,7 +37,7 @@ Here's the structured menu information extracted from the provided Hebrew menu i
         {
           "name": "לאסנייה חריפה אש",
           "price": 78,
-          "description": "טרטופו, שיטקי, גויבדה, בזיליקום פרמזן"
+          "description": "טרטופו, שיטקי, גויאבה, בזיליקום, פרמזן"
         }
       ]
     },
@@ -49,7 +49,7 @@ Here's the structured menu information extracted from the provided Hebrew menu i
           "price": 17
         },
         {
-          "name": "לחם נפוליק",
+          "name": "לחם שפניולי",
           "price": 23
         },
         {

@@ -26,18 +26,19 @@ Here's the structured menu information extracted from the provided Hebrew menu i
           "price": 48
         },
         {
-          "name": "פיצה בדרוק",
-          "price": 70
-        },
-        {
-          "name": "פיצה מיוחדת",
+          "name": "פיצה בדרום",
           "price": 70,
-          "description": "מיקס גבינות, שום קונפי, קרעי חלה, אספרגוס צרוב"
+          "description": "מיקס גבינות, שום מוזהב, קונפיט שרי, זיתים, אספרגוס תרד"
         },
         {
-          "name": "לאצרטה חריפה אש",
+          "name": "פיצה מילאנזה",
+          "price": 70,
+          "description": "מיוחדת"
+        },
+        {
+          "name": "לאצמרה חריפה אש",
           "price": 78,
-          "description": "עגבניות, גבינה, בזיליקום, פלפל"
+          "description": "טרבנקו, שיטקי, גוולה, בלקאן, פרמז'ן"
         }
       ]
     },
@@ -66,7 +67,7 @@ Here's the structured menu information extracted from the provided Hebrew menu i
           "price": 8
         },
         {
-          "name": "קולה / דיאט",
+          "name": "קולה / זירו",
           "price": 14
         },
         {
